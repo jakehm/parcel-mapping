@@ -6,13 +6,11 @@ const getRand = () => {
 	return Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000
 }
 
-//google asks for captchas from DO droplets so bing is used
-let defaultOptions = { bing : false }
-const getSearchResults = (query, options = defaultOptions) => {
-	let url
+const getSearchResults = (query, cb, options = {bing: false}) => {
+    let url
 	let selector
 	let results
-
+    
 	if (options.bing) {
 		url = 'http://www.bing.com/search?q=' + query
 		selector = '#b_results li h2 a'
@@ -34,13 +32,9 @@ const getSearchResults = (query, options = defaultOptions) => {
 			results = $(selector).map((i, e) => {
 				return $(e).attr('href')
 			}).get()
-			console.log('inside browser')
-			console.log(results)
 		})
 		.end()
-	console.log('outside browser')
-	console.log(results)
-	return results
+        .then(cb(results))
 }
 
 const getLinks = (url) => {
@@ -56,12 +50,13 @@ const getLinks = (url) => {
 				return $(e).attr('href')
 			}).get()
 		})
+	    .then((results) => {return results})
 		.end()
-	return results
 }
 
-let searchResults = getSearchResults('bowdoin+assessor', {bing: true})
-console.log(searchResults)
+let searchResults = getSearchResults('bowdoin+assessor', (results) => {
+    console.log('printing results: ' + results)
+}, {bing: true})
 /*let links = getLinks(searchResults[0])
 links.forEach((link, i) => {
 	console.log(link)
