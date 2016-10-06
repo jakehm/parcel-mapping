@@ -1,12 +1,35 @@
 const browser = require('./browser.js')
 const cheerio = require('cheerio')
 
+//these functions can be moved to a utils module
 //returns a random number between 2000 and 5000
 const getRand = () => {
 	return Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000
 }
 
-const getSearchResults = (query, cb, options = {bing: false}) => {
+const absolutizeLink = (url, href) => {
+	if (href.substring(0,3).toLowerCase() == 'htt')
+		return href
+	if (!href)
+		return href
+	return url+'/'+href
+}
+
+const getLinks = (url) => {
+	return browser
+		.url(url)
+		.pause(10000)
+		.getSource()
+		.then((source) => {
+			let $ = cheerio.load(source)
+			let links = $('a').map((i, e) => {
+				return $(e).attr('href')
+			}).get()
+			return links
+		})
+}
+
+const getSearchResults = (query, options = {bing: false}) => {
     let url
 	let selector
 	let results
@@ -18,6 +41,9 @@ const getSearchResults = (query, cb, options = {bing: false}) => {
 		url = 'https://www.google.com/#q=' + query
 		selector = '#rso div div div h3 a'
 	}
+
+	browser.addCommand('getLinks', getLinks)
+
 	browser
 		.init()
 		.url(url)
@@ -32,33 +58,16 @@ const getSearchResults = (query, cb, options = {bing: false}) => {
 			results = $(selector).map((i, e) => {
 				return $(e).attr('href')
 			}).get()
+			browser
+				.getLinks(results[0])
+				.then((links) => {
+					links.forEach((link) => {
+						console.log(absolutizeLink(results[0], link))
+					})
+				})
 		})
-		.end()
-        .then(cb(results))
 }
 
-const getLinks = (url) => {
-	let results
-	browser
-		.init()
-		.url(url)
-		.pause(10000)
-		.getSource()
-		.then((source) => {
-			let $ = cheerio.load(source)
-			results = $('a').map((i, e) => {
-				return $(e).attr('href')
-			}).get()
-		})
-	    .then((results) => {return results})
-		.end()
-}
 
-let searchResults = getSearchResults('bowdoin+assessor', (results) => {
-    console.log('printing results: ' + results)
-}, {bing: true})
-/*let links = getLinks(searchResults[0])
-links.forEach((link, i) => {
-	console.log(link)
-})
-*/
+let searchResults = getSearchResults('bowdoin+assessor', {bing: true})
+browser.end()
