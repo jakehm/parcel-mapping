@@ -1,0 +1,18 @@
+
+[1;33m=======================================================================================[0m
+Selenium 2.0 / webdriver protocol bindings implementation with helper commands in nodejs.
+For a complete list of commands, visit [1;32mhttp://webdriver.io/api.html[0m.
+[1;33m=======================================================================================[0m
+
+[07:45:39]  COMMAND	POST 	 "/wd/hub/session"
+[07:45:39]  DATA		{"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"browserName":"chrome","chromeOptions":{"prefs":{"profile.default_content_setting_values.notifications":2}},"loggingPrefs":{"browser":"ALL","driver":"ALL"},"requestOrigins":{"url":"http://webdriver.io","version":"4.2.16","name":"webdriverio"}}}
+[07:45:39]  INFO	SET SESSION ID 25f2aaa4-64ed-456a-b20c-ab45c5a77d0f
+[07:45:39]  RESULT		{"applicationCacheEnabled":false,"rotatable":false,"mobileEmulationEnabled":false,"chrome":{"chromedriverVersion":"2.22","userDataDir":"/tmp/.org.chromium.Chromium.OtdghT"},"takesHeapSnapshot":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"version":"53.0.2785.116","platform":"LINUX","browserConnectionEnabled":false,"nativeEvents":true,"acceptSslCerts":true,"webdriver.remote.sessionid":"25f2aaa4-64ed-456a-b20c-ab45c5a77d0f","locationContextEnabled":true,"webStorageEnabled":true,"browserName":"chrome","takesScreenshot":true,"javascriptEnabled":true,"cssSelectorsEnabled":true}
+[07:45:40]  COMMAND	POST 	 "/wd/hub/session/25f2aaa4-64ed-456a-b20c-ab45c5a77d0f/url"
+[07:45:40]  DATA		{"url":"http://www.bing.com/search?q=bowdoin+assessor"}
+[07:45:40]  RESULT		null
+[07:45:40]  COMMAND	GET 	 "/wd/hub/session/25f2aaa4-64ed-456a-b20c-ab45c5a77d0f/title"
+[07:45:40]  DATA		{}
+[07:45:40]  RESULT		"bowdoin assessor - Bing"
+[07:45:50]  COMMAND	GET 	 "/wd/hub/session/25f2aaa4-64ed-456a-b20c-ab45c5a77d0f/source"
+[07:45:50]  DATA		{}

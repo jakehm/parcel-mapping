@@ -1,0 +1,22 @@
+
+[1;33m=======================================================================================[0m
+Selenium 2.0 / webdriver protocol bindings implementation with helper commands in nodejs.
+For a complete list of commands, visit [1;32mhttp://webdriver.io/api.html[0m.
+[1;33m=======================================================================================[0m
+
+[06:24:08]  COMMAND	POST 	 "/wd/hub/session"
+[06:24:08]  DATA		{"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"browserName":"chrome","chromeOptions":{"prefs":{"profile.default_content_setting_values.notifications":2}},"loggingPrefs":{"browser":"ALL","driver":"ALL"},"requestOrigins":{"url":"http://webdriver.io","version":"4.2.16","name":"webdriverio"}}}
+[06:24:10]  INFO	SET SESSION ID 15787cea-0215-4f13-b22c-989a787a5266
+[06:24:10]  RESULT		{"applicationCacheEnabled":false,"rotatable":false,"mobileEmulationEnabled":false,"chrome":{"chromedriverVersion":"2.22","userDataDir":"/tmp/.org.chromium.Chromium.8AUaPQ"},"takesHeapSnapshot":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"version":"53.0.2785.116","platform":"LINUX","browserConnectionEnabled":false,"nativeEvents":true,"acceptSslCerts":true,"webdriver.remote.sessionid":"15787cea-0215-4f13-b22c-989a787a5266","locationContextEnabled":true,"webStorageEnabled":true,"browserName":"chrome","takesScreenshot":true,"javascriptEnabled":true,"cssSelectorsEnabled":true}
+[06:24:10]  COMMAND	POST 	 "/wd/hub/session/15787cea-0215-4f13-b22c-989a787a5266/url"
+[06:24:10]  DATA		{"url":"https://www.google.com/#q=bowdoin+assessor"}
+[06:24:11]  RESULT		null
+[06:24:11]  COMMAND	GET 	 "/wd/hub/session/15787cea-0215-4f13-b22c-989a787a5266/title"
+[06:24:11]  DATA		{}
+[06:24:11]  RESULT		"Google"
+[06:24:21]  COMMAND	GET 	 "/wd/hub/session/15787cea-0215-4f13-b22c-989a787a5266/source"
+[06:24:21]  DATA		{}
+[06:24:21]  RESULT		"<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\" itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\"><head><meta content=\"Search the world's information, including webpages, ... (320673 more bytes)
+[06:24:21]  COMMAND	DELETE 	 "/wd/hub/session/15787cea-0215-4f13-b22c-989a787a5266"
+[06:24:21]  DATA		{}
+[06:24:21]  RESULT		null

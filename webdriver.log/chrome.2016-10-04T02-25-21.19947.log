@@ -1,0 +1,19 @@
+
+[1;33m=======================================================================================[0m
+Selenium 2.0 / webdriver protocol bindings implementation with helper commands in nodejs.
+For a complete list of commands, visit [1;32mhttp://webdriver.io/api.html[0m.
+[1;33m=======================================================================================[0m
+
+[22:25:22]  COMMAND	POST 	 "/wd/hub/session"
+[22:25:22]  DATA		{"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"browserName":"chrome","chromeOptions":{"prefs":{"profile.default_content_setting_values.notifications":2}},"loggingPrefs":{"browser":"ALL","driver":"ALL"},"requestOrigins":{"url":"http://webdriver.io","version":"4.2.16","name":"webdriverio"}}}
+[22:25:24]  INFO	SET SESSION ID f8420594-0caa-4804-a85a-edea00a3f0fe
+[22:25:24]  RESULT		{"applicationCacheEnabled":false,"rotatable":false,"mobileEmulationEnabled":false,"chrome":{"chromedriverVersion":"2.22","userDataDir":"/tmp/.org.chromium.Chromium.66W7Sf"},"takesHeapSnapshot":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"version":"53.0.2785.116","platform":"LINUX","browserConnectionEnabled":false,"nativeEvents":true,"acceptSslCerts":true,"webdriver.remote.sessionid":"f8420594-0caa-4804-a85a-edea00a3f0fe","locationContextEnabled":true,"webStorageEnabled":true,"browserName":"chrome","takesScreenshot":true,"javascriptEnabled":true,"cssSelectorsEnabled":true}
+[22:25:24]  COMMAND	POST 	 "/wd/hub/session/f8420594-0caa-4804-a85a-edea00a3f0fe/url"
+[22:25:24]  DATA		{"url":"https://www.google.com/#q=bowdoin+assessor"}
+[22:25:25]  RESULT		null
+[22:25:25]  COMMAND	GET 	 "/wd/hub/session/f8420594-0caa-4804-a85a-edea00a3f0fe/title"
+[22:25:25]  DATA		{}
+[22:25:25]  RESULT		"Google"
+[22:25:35]  COMMAND	GET 	 "/wd/hub/session/f8420594-0caa-4804-a85a-edea00a3f0fe/source"
+[22:25:35]  DATA		{}
+[22:25:35]  RESULT		"<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\" itemscope=\"\" itemtype=\"http://schema.org/WebPage\" lang=\"en\"><head><meta content=\"Search the world's information, including webpages, ... (319641 more bytes)

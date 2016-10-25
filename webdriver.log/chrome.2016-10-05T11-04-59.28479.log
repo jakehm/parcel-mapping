@@ -1,0 +1,22 @@
+
+[1;33m=======================================================================================[0m
+Selenium 2.0 / webdriver protocol bindings implementation with helper commands in nodejs.
+For a complete list of commands, visit [1;32mhttp://webdriver.io/api.html[0m.
+[1;33m=======================================================================================[0m
+
+[07:04:59]  COMMAND	POST 	 "/wd/hub/session"
+[07:04:59]  DATA		{"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"browserName":"chrome","chromeOptions":{"prefs":{"profile.default_content_setting_values.notifications":2}},"loggingPrefs":{"browser":"ALL","driver":"ALL"},"requestOrigins":{"url":"http://webdriver.io","version":"4.2.16","name":"webdriverio"}}}
+[07:05:00]  INFO	SET SESSION ID f0cf49ac-8cff-4655-9a70-8fedde9ad571
+[07:05:00]  RESULT		{"applicationCacheEnabled":false,"rotatable":false,"mobileEmulationEnabled":false,"chrome":{"chromedriverVersion":"2.22","userDataDir":"/tmp/.org.chromium.Chromium.EqwKPu"},"takesHeapSnapshot":true,"databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":false,"version":"53.0.2785.116","platform":"LINUX","browserConnectionEnabled":false,"nativeEvents":true,"acceptSslCerts":true,"webdriver.remote.sessionid":"f0cf49ac-8cff-4655-9a70-8fedde9ad571","locationContextEnabled":true,"webStorageEnabled":true,"browserName":"chrome","takesScreenshot":true,"javascriptEnabled":true,"cssSelectorsEnabled":true}
+[07:05:00]  COMMAND	POST 	 "/wd/hub/session/f0cf49ac-8cff-4655-9a70-8fedde9ad571/url"
+[07:05:00]  DATA		{"url":"http://www.bing.com/search?q=bowdoin+assessor"}
+[07:05:00]  RESULT		null
+[07:05:00]  COMMAND	GET 	 "/wd/hub/session/f0cf49ac-8cff-4655-9a70-8fedde9ad571/title"
+[07:05:00]  DATA		{}
+[07:05:01]  RESULT		"bowdoin assessor - Bing"
+[07:05:11]  COMMAND	GET 	 "/wd/hub/session/f0cf49ac-8cff-4655-9a70-8fedde9ad571/source"
+[07:05:11]  DATA		{}
+[07:05:11]  RESULT		"<!DOCTYPE html><html lang=\"en\" xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:web=\"http://schemas.live.com/Web/\"><head><script id=\"ipV6TestScript2\" type=\"text/javascript\" async= ... (171902 more bytes)
+[07:05:11]  COMMAND	DELETE 	 "/wd/hub/session/f0cf49ac-8cff-4655-9a70-8fedde9ad571"
+[07:05:11]  DATA		{}
+[07:05:11]  RESULT		null
