@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "2.1.2",
     "cheerio": "0.22.0",
     "webdriverio": "4.2.16"
   }

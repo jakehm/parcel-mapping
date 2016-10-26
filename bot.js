@@ -1,5 +1,6 @@
 const browser = require('./browser.js')
 const cheerio = require('cheerio')
+const async = require('async')
 
 const testData = [
 	{action: 'goToUrl', target: 'www.bing.com'},
@@ -8,24 +9,19 @@ const testData = [
 
 const doTasks  = (tasks) => {
 
+	let index=0
+
 	browser.init()
-	tasks.forEach((task, i) => {
-		if (task.action==='goToUrl')
-			browser.url(task.target)
-		if (task.action==='doClick')
-			browser.click(task.target)
-		if (task.action==='doText')
-			browser.setValue(task.target, task.textInput)
-		
-		browser.pause(5000)
-	})
-	browser.getCommandHistory().then((history) => {
-		browser.end()
-		return new Promise((resolve, reject) => {
-			resolve(history)
-		})
+	.then(() => {
+		async.eachSeries(tasks, (task) => {
+			if (task.action==='goToUrl')
+				browser.url(task.target).pause(5000)
+			if (task.action==='doClick')
+				browser.click(task.target).pause(5000)
+			if (task.action==='doText')
+				browser.setValue(task.target, task.textInput).pause(5000)
+		}).end()
 	})
 }
 
 doTasks(testData)
-	.then(result => {console.log(result)})

@@ -1,0 +1,13 @@
+
+[1;33m=======================================================================================[0m
+Selenium 2.0 / webdriver protocol bindings implementation with helper commands in nodejs.
+For a complete list of commands, visit [1;32mhttp://webdriver.io/api.html[0m.
+[1;33m=======================================================================================[0m
+
+[07:41:45]  COMMAND	POST 	 "/wd/hub/session"
+[07:41:45]  DATA		{"desiredCapabilities":{"javascriptEnabled":true,"locationContextEnabled":true,"handlesAlerts":true,"rotatable":true,"browserName":"chrome","chromeOptions":{"prefs":{"profile.default_content_setting_values.notifications":2}},"loggingPrefs":{"browser":"ALL","driver":"ALL"},"requestOrigins":{"url":"http://webdriver.io","version":"4.2.16","name":"webdriverio"}}}
+[07:41:47]  INFO	SET SESSION ID c3d840d9-5766-48f8-b843-7d3bf0d3870f
+[07:41:47]  RESULT		{"applicationCacheEnabled":false,"rotatable":false,"mobileEmulationEnabled":false,"networkConnectionEnabled":false,"chrome":{"chromedriverVersion":"2.23","userDataDir":"/tmp/.org.chromium.Chromium.g0otw1"},"takesHeapSnapshot":true,"pageLoadStrategy":"normal","databaseEnabled":false,"handlesAlerts":true,"hasTouchScreen":true,"version":"54.0.2840.71","platform":"LINUX","browserConnectionEnabled":false,"nativeEvents":true,"acceptSslCerts":true,"webdriver.remote.sessionid":"c3d840d9-5766-48f8-b843-7d3bf0d3870f","locationContextEnabled":true,"webStorageEnabled":true,"browserName":"chrome","takesScreenshot":true,"javascriptEnabled":true,"cssSelectorsEnabled":true}
+[07:41:47]  COMMAND	POST 	 "/wd/hub/session/c3d840d9-5766-48f8-b843-7d3bf0d3870f/url"
+[07:41:47]  DATA		{"url":"https://www.bing.com/"}
+[07:41:48]  RESULT		null
